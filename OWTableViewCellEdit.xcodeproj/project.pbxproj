@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5634CFC1DF12437002DA0A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5634CFB1DF12437002DA0A6 /* main.m */; };
+		F5634CFF1DF12437002DA0A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5634CFE1DF12437002DA0A6 /* AppDelegate.m */; };
+		F5634D071DF12437002DA0A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5634D061DF12437002DA0A6 /* Assets.xcassets */; };
+		F5634D0A1DF12437002DA0A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5634D081DF12437002DA0A6 /* LaunchScreen.storyboard */; };
+		F5634D151DF12437002DA0A6 /* OWTableViewCellEditTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5634D141DF12437002DA0A6 /* OWTableViewCellEditTests.m */; };
+		F5634D201DF12437002DA0A6 /* OWTableViewCellEditUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5634D1F1DF12437002DA0A6 /* OWTableViewCellEditUITests.m */; };
+		F5634D301DF125C2002DA0A6 /* OWTableViewCellEditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5634D2F1DF125C2002DA0A6 /* OWTableViewCellEditVC.m */; };
+		F5634D381DF12B0F002DA0A6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5634D361DF12B0F002DA0A6 /* ViewController.m */; };
+		F5634D391DF12B0F002DA0A6 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5634D371DF12B0F002DA0A6 /* ViewController.xib */; };
+		F59ABA421DF66CD0002F77F2 /* OWCustomPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F59ABA3F1DF66CD0002F77F2 /* OWCustomPickerCell.m */; };
+		F59ABA431DF66CD0002F77F2 /* OWTableViewCellPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F59ABA411DF66CD0002F77F2 /* OWTableViewCellPicker.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F5634D111DF12437002DA0A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5634CEF1DF12437002DA0A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5634CF61DF12437002DA0A6;
+			remoteInfo = OWTableViewCellEdit;
+		};
+		F5634D1C1DF12437002DA0A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5634CEF1DF12437002DA0A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5634CF61DF12437002DA0A6;
+			remoteInfo = OWTableViewCellEdit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F5634CF71DF12437002DA0A6 /* OWTableViewCellEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OWTableViewCellEdit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5634CFB1DF12437002DA0A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F5634CFD1DF12437002DA0A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F5634CFE1DF12437002DA0A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F5634D061DF12437002DA0A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5634D091DF12437002DA0A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F5634D0B1DF12437002DA0A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5634D101DF12437002DA0A6 /* OWTableViewCellEditTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OWTableViewCellEditTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5634D141DF12437002DA0A6 /* OWTableViewCellEditTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWTableViewCellEditTests.m; sourceTree = "<group>"; };
+		F5634D161DF12437002DA0A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5634D1B1DF12437002DA0A6 /* OWTableViewCellEditUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OWTableViewCellEditUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5634D1F1DF12437002DA0A6 /* OWTableViewCellEditUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWTableViewCellEditUITests.m; sourceTree = "<group>"; };
+		F5634D211DF12437002DA0A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5634D2E1DF125C2002DA0A6 /* OWTableViewCellEditVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWTableViewCellEditVC.h; sourceTree = "<group>"; };
+		F5634D2F1DF125C2002DA0A6 /* OWTableViewCellEditVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWTableViewCellEditVC.m; sourceTree = "<group>"; };
+		F5634D351DF12B0F002DA0A6 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F5634D361DF12B0F002DA0A6 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F5634D371DF12B0F002DA0A6 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		F59ABA3E1DF66CD0002F77F2 /* OWCustomPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWCustomPickerCell.h; sourceTree = "<group>"; };
+		F59ABA3F1DF66CD0002F77F2 /* OWCustomPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWCustomPickerCell.m; sourceTree = "<group>"; };
+		F59ABA401DF66CD0002F77F2 /* OWTableViewCellPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWTableViewCellPicker.h; sourceTree = "<group>"; };
+		F59ABA411DF66CD0002F77F2 /* OWTableViewCellPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWTableViewCellPicker.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5634CF41DF12437002DA0A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5634D0D1DF12437002DA0A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5634D181DF12437002DA0A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5634CEE1DF12437002DA0A6 = {
+			isa = PBXGroup;
+			children = (
+				F59ABA3D1DF66CD0002F77F2 /* OWTableViewCellPicker */,
+				F5634D2D1DF1259A002DA0A6 /* OWTableViewCellEditVC */,
+				F5634CF91DF12437002DA0A6 /* OWTableViewCellEdit */,
+				F5634D131DF12437002DA0A6 /* OWTableViewCellEditTests */,
+				F5634D1E1DF12437002DA0A6 /* OWTableViewCellEditUITests */,
+				F5634CF81DF12437002DA0A6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5634CF81DF12437002DA0A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5634CF71DF12437002DA0A6 /* OWTableViewCellEdit.app */,
+				F5634D101DF12437002DA0A6 /* OWTableViewCellEditTests.xctest */,
+				F5634D1B1DF12437002DA0A6 /* OWTableViewCellEditUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5634CF91DF12437002DA0A6 /* OWTableViewCellEdit */ = {
+			isa = PBXGroup;
+			children = (
+				F5634CFD1DF12437002DA0A6 /* AppDelegate.h */,
+				F5634CFE1DF12437002DA0A6 /* AppDelegate.m */,
+				F5634D351DF12B0F002DA0A6 /* ViewController.h */,
+				F5634D361DF12B0F002DA0A6 /* ViewController.m */,
+				F5634D371DF12B0F002DA0A6 /* ViewController.xib */,
+				F5634D061DF12437002DA0A6 /* Assets.xcassets */,
+				F5634D081DF12437002DA0A6 /* LaunchScreen.storyboard */,
+				F5634D0B1DF12437002DA0A6 /* Info.plist */,
+				F5634CFA1DF12437002DA0A6 /* Supporting Files */,
+			);
+			path = OWTableViewCellEdit;
+			sourceTree = "<group>";
+		};
+		F5634CFA1DF12437002DA0A6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5634CFB1DF12437002DA0A6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5634D131DF12437002DA0A6 /* OWTableViewCellEditTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5634D141DF12437002DA0A6 /* OWTableViewCellEditTests.m */,
+				F5634D161DF12437002DA0A6 /* Info.plist */,
+			);
+			path = OWTableViewCellEditTests;
+			sourceTree = "<group>";
+		};
+		F5634D1E1DF12437002DA0A6 /* OWTableViewCellEditUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F5634D1F1DF12437002DA0A6 /* OWTableViewCellEditUITests.m */,
+				F5634D211DF12437002DA0A6 /* Info.plist */,
+			);
+			path = OWTableViewCellEditUITests;
+			sourceTree = "<group>";
+		};
+		F5634D2D1DF1259A002DA0A6 /* OWTableViewCellEditVC */ = {
+			isa = PBXGroup;
+			children = (
+				F5634D2E1DF125C2002DA0A6 /* OWTableViewCellEditVC.h */,
+				F5634D2F1DF125C2002DA0A6 /* OWTableViewCellEditVC.m */,
+			);
+			path = OWTableViewCellEditVC;
+			sourceTree = "<group>";
+		};
+		F59ABA3D1DF66CD0002F77F2 /* OWTableViewCellPicker */ = {
+			isa = PBXGroup;
+			children = (
+				F59ABA3E1DF66CD0002F77F2 /* OWCustomPickerCell.h */,
+				F59ABA3F1DF66CD0002F77F2 /* OWCustomPickerCell.m */,
+				F59ABA401DF66CD0002F77F2 /* OWTableViewCellPicker.h */,
+				F59ABA411DF66CD0002F77F2 /* OWTableViewCellPicker.m */,
+			);
+			path = OWTableViewCellPicker;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5634CF61DF12437002DA0A6 /* OWTableViewCellEdit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5634D241DF12437002DA0A6 /* Build configuration list for PBXNativeTarget "OWTableViewCellEdit" */;
+			buildPhases = (
+				F5634CF31DF12437002DA0A6 /* Sources */,
+				F5634CF41DF12437002DA0A6 /* Frameworks */,
+				F5634CF51DF12437002DA0A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OWTableViewCellEdit;
+			productName = OWTableViewCellEdit;
+			productReference = F5634CF71DF12437002DA0A6 /* OWTableViewCellEdit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F5634D0F1DF12437002DA0A6 /* OWTableViewCellEditTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5634D271DF12437002DA0A6 /* Build configuration list for PBXNativeTarget "OWTableViewCellEditTests" */;
+			buildPhases = (
+				F5634D0C1DF12437002DA0A6 /* Sources */,
+				F5634D0D1DF12437002DA0A6 /* Frameworks */,
+				F5634D0E1DF12437002DA0A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5634D121DF12437002DA0A6 /* PBXTargetDependency */,
+			);
+			name = OWTableViewCellEditTests;
+			productName = OWTableViewCellEditTests;
+			productReference = F5634D101DF12437002DA0A6 /* OWTableViewCellEditTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F5634D1A1DF12437002DA0A6 /* OWTableViewCellEditUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5634D2A1DF12437002DA0A6 /* Build configuration list for PBXNativeTarget "OWTableViewCellEditUITests" */;
+			buildPhases = (
+				F5634D171DF12437002DA0A6 /* Sources */,
+				F5634D181DF12437002DA0A6 /* Frameworks */,
+				F5634D191DF12437002DA0A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5634D1D1DF12437002DA0A6 /* PBXTargetDependency */,
+			);
+			name = OWTableViewCellEditUITests;
+			productName = OWTableViewCellEditUITests;
+			productReference = F5634D1B1DF12437002DA0A6 /* OWTableViewCellEditUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5634CEF1DF12437002DA0A6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = conpak;
+				TargetAttributes = {
+					F5634CF61DF12437002DA0A6 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 5997FHFDCF;
+						ProvisioningStyle = Automatic;
+					};
+					F5634D0F1DF12437002DA0A6 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 5997FHFDCF;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F5634CF61DF12437002DA0A6;
+					};
+					F5634D1A1DF12437002DA0A6 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 5997FHFDCF;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F5634CF61DF12437002DA0A6;
+					};
+				};
+			};
+			buildConfigurationList = F5634CF21DF12437002DA0A6 /* Build configuration list for PBXProject "OWTableViewCellEdit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5634CEE1DF12437002DA0A6;
+			productRefGroup = F5634CF81DF12437002DA0A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5634CF61DF12437002DA0A6 /* OWTableViewCellEdit */,
+				F5634D0F1DF12437002DA0A6 /* OWTableViewCellEditTests */,
+				F5634D1A1DF12437002DA0A6 /* OWTableViewCellEditUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5634CF51DF12437002DA0A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5634D0A1DF12437002DA0A6 /* LaunchScreen.storyboard in Resources */,
+				F5634D391DF12B0F002DA0A6 /* ViewController.xib in Resources */,
+				F5634D071DF12437002DA0A6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5634D0E1DF12437002DA0A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5634D191DF12437002DA0A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5634CF31DF12437002DA0A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5634CFF1DF12437002DA0A6 /* AppDelegate.m in Sources */,
+				F59ABA421DF66CD0002F77F2 /* OWCustomPickerCell.m in Sources */,
+				F5634D301DF125C2002DA0A6 /* OWTableViewCellEditVC.m in Sources */,
+				F5634CFC1DF12437002DA0A6 /* main.m in Sources */,
+				F59ABA431DF66CD0002F77F2 /* OWTableViewCellPicker.m in Sources */,
+				F5634D381DF12B0F002DA0A6 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5634D0C1DF12437002DA0A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5634D151DF12437002DA0A6 /* OWTableViewCellEditTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5634D171DF12437002DA0A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5634D201DF12437002DA0A6 /* OWTableViewCellEditUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5634D121DF12437002DA0A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5634CF61DF12437002DA0A6 /* OWTableViewCellEdit */;
+			targetProxy = F5634D111DF12437002DA0A6 /* PBXContainerItemProxy */;
+		};
+		F5634D1D1DF12437002DA0A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5634CF61DF12437002DA0A6 /* OWTableViewCellEdit */;
+			targetProxy = F5634D1C1DF12437002DA0A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F5634D081DF12437002DA0A6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5634D091DF12437002DA0A6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5634D221DF12437002DA0A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5634D231DF12437002DA0A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5634D251DF12437002DA0A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5997FHFDCF;
+				INFOPLIST_FILE = OWTableViewCellEdit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Owen.OWTableViewCellEdit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F5634D261DF12437002DA0A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5997FHFDCF;
+				INFOPLIST_FILE = OWTableViewCellEdit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Owen.OWTableViewCellEdit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F5634D281DF12437002DA0A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5997FHFDCF;
+				INFOPLIST_FILE = OWTableViewCellEditTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Owen.OWTableViewCellEditTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OWTableViewCellEdit.app/OWTableViewCellEdit";
+			};
+			name = Debug;
+		};
+		F5634D291DF12437002DA0A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5997FHFDCF;
+				INFOPLIST_FILE = OWTableViewCellEditTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Owen.OWTableViewCellEditTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OWTableViewCellEdit.app/OWTableViewCellEdit";
+			};
+			name = Release;
+		};
+		F5634D2B1DF12437002DA0A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 5997FHFDCF;
+				INFOPLIST_FILE = OWTableViewCellEditUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Owen.OWTableViewCellEditUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = OWTableViewCellEdit;
+			};
+			name = Debug;
+		};
+		F5634D2C1DF12437002DA0A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 5997FHFDCF;
+				INFOPLIST_FILE = OWTableViewCellEditUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Owen.OWTableViewCellEditUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = OWTableViewCellEdit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5634CF21DF12437002DA0A6 /* Build configuration list for PBXProject "OWTableViewCellEdit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5634D221DF12437002DA0A6 /* Debug */,
+				F5634D231DF12437002DA0A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5634D241DF12437002DA0A6 /* Build configuration list for PBXNativeTarget "OWTableViewCellEdit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5634D251DF12437002DA0A6 /* Debug */,
+				F5634D261DF12437002DA0A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5634D271DF12437002DA0A6 /* Build configuration list for PBXNativeTarget "OWTableViewCellEditTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5634D281DF12437002DA0A6 /* Debug */,
+				F5634D291DF12437002DA0A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5634D2A1DF12437002DA0A6 /* Build configuration list for PBXNativeTarget "OWTableViewCellEditUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5634D2B1DF12437002DA0A6 /* Debug */,
+				F5634D2C1DF12437002DA0A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5634CEF1DF12437002DA0A6 /* Project object */;
+}
