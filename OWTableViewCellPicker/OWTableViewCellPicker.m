@@ -275,7 +275,7 @@
             [snapshot removeFromSuperview];
             snapshot = nil;
             sourceIndexPath = nil;
-            
+            cell.hidden = NO;
         }];
     }
 }
