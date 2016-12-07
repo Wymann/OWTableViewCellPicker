@@ -21,6 +21,8 @@
 
 - (NSArray *)sectionTitleArrayOnTableViewCellEditView:(OWTableViewCellPicker *)view;
 - (NSArray *)cantEditArrayOnTableViewCellEditView:(OWTableViewCellPicker *)view;
+- (CGFloat)rowHeightOnTableViewCellEditView:(OWTableViewCellPicker *)view;
+- (CGFloat)headerHeightOnTableViewCellEditView:(OWTableViewCellPicker *)view;
 
 @end
 

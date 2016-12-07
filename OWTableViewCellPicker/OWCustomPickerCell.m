@@ -13,7 +13,6 @@
 @property (nonatomic, strong) NSString *cellTitle;
 @property (nonatomic) CGFloat cellHeight;
 @property (nonatomic) CGFloat cellWidth;
-@property (nonatomic, strong) NSIndexPath *indexPath;
 @property (nonatomic, strong) UIView *managerView;
 @property (nonatomic, strong) UIButton *button;
 @property (nonatomic) BOOL isEdit;
@@ -81,9 +80,11 @@
         } else {
             _button.backgroundColor = [UIColor blueColor];
             [_button setTitle:@"+" forState:UIControlStateNormal];
-            
-            _managerView.hidden = YES;
         }
+    }
+    
+    if (_indexPath.section == 1) {
+        _managerView.hidden = YES;
     }
 }
 

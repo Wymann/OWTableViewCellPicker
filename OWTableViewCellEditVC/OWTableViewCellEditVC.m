@@ -57,6 +57,16 @@
     return @[@"2016/17*"];
 }
 
+-(CGFloat)rowHeightOnTableViewCellEditView:(OWTableViewCellPicker *)view
+{
+    return 50.0;
+}
+
+-(CGFloat)headerHeightOnTableViewCellEditView:(OWTableViewCellPicker *)view
+{
+    return 50.0;
+}
+
 -(void)didChangedDataOnTableViewCellEditView:(OWTableViewCellPicker *)view currentArray:(NSArray *)currentArray
 {
     NSLog(@"changed current :%@",currentArray);

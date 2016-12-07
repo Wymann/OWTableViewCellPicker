@@ -9,8 +9,8 @@
 #import "OWTableViewCellPicker.h"
 #import "OWCustomPickerCell.h"
 
-#define rowHeight 40.0
-#define headerHeight 40.0
+#define rowHeight 50.0
+#define headerHeight 50.0
 
 @interface OWTableViewCellPicker()<UITableViewDelegate, UITableViewDataSource, OWCustomPickerCellDelegate>
 
@@ -19,6 +19,8 @@
 @property (nonatomic, strong) NSMutableArray *optionalArr;
 @property (nonatomic, strong) NSMutableArray *titleArr;
 @property (nonatomic, strong) NSMutableArray *cantEditArr;
+@property (nonatomic) CGFloat row_height;
+@property (nonatomic) CGFloat header_height;
 
 @end
 
@@ -49,6 +51,14 @@
     
     if ([self.dataSource respondsToSelector:@selector(cantEditArrayOnTableViewCellEditView:)]) {
         _cantEditArr = [NSMutableArray arrayWithArray:[self.dataSource cantEditArrayOnTableViewCellEditView:self]];
+    }
+    
+    if ([self.dataSource respondsToSelector:@selector(rowHeightOnTableViewCellEditView:)]) {
+        _row_height = [self.dataSource rowHeightOnTableViewCellEditView:self];
+    }
+    
+    if ([self.dataSource respondsToSelector:@selector(headerHeightOnTableViewCellEditView:)]) {
+        _header_height = [self.dataSource headerHeightOnTableViewCellEditView:self];
     }
 }
 
@@ -85,23 +95,31 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return rowHeight;
+    if (_row_height > 0.0) {
+        return _row_height;
+    } else {
+        return rowHeight;
+    }
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     OWCustomPickerCell *cell;
+    
+    BOOL edit = YES;
+    CGFloat cellHeight = _row_height > 0.0 ? _row_height : rowHeight;
+    
     if (indexPath.section == 0) {
         for (NSInteger i = 0; i < _currentArr.count; i++) {
             if (i == indexPath.row) {
+                
                 for (NSInteger j = 0; j < _cantEditArr.count; j++) {
                     NSString *cantEditStr = _cantEditArr[j];
                     if ([cantEditStr isEqualToString:_currentArr[i]]) {
-                        cell = [[OWCustomPickerCell alloc] initWithTitle:_currentArr[i] height:rowHeight width:self.frame.size.width indexPath:indexPath isEdit:NO];
-                    } else {
-                        cell = [[OWCustomPickerCell alloc] initWithTitle:_currentArr[i] height:rowHeight width:self.frame.size.width indexPath:indexPath isEdit:YES];
+                        edit = NO;
                     }
                 }
+                cell = [[OWCustomPickerCell alloc] initWithTitle:_currentArr[i] height:cellHeight width:self.frame.size.width indexPath:indexPath isEdit:edit];
             }
         }
     } else {
@@ -110,10 +128,9 @@
                 for (NSInteger j = 0; j < _cantEditArr.count; j++) {
                     NSString *cantEditStr = _cantEditArr[j];
                     if ([cantEditStr isEqualToString:_optionalArr[i]]) {
-                        cell = [[OWCustomPickerCell alloc] initWithTitle:_optionalArr[i] height:rowHeight width:self.frame.size.width indexPath:indexPath isEdit:NO];
-                    } else {
-                        cell = [[OWCustomPickerCell alloc] initWithTitle:_optionalArr[i] height:rowHeight width:self.frame.size.width indexPath:indexPath isEdit:YES];
+                        edit = NO;
                     }
+                    cell = [[OWCustomPickerCell alloc] initWithTitle:_optionalArr[i] height:cellHeight width:self.frame.size.width indexPath:indexPath isEdit:edit];
                 }
             }
         }
@@ -133,7 +150,11 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return headerHeight;
+    if (_header_height > 0.0) {
+        return _header_height;
+    } else {
+        return headerHeight;
+    }
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -148,9 +169,13 @@
 
 -(void)didClickButtonOnOWCustomPickerCell:(OWCustomPickerCell *)cell buttonType:(OWButtonType)buttonType indexPath:(NSIndexPath *)indexPath
 {
-    [_myTableView reloadData];
-    
     if (buttonType == OWButtonType_delect) {
+        
+        for (NSInteger i = indexPath.row + 1; i < _currentArr.count; i++) {
+            OWCustomPickerCell *cell = (OWCustomPickerCell *)[_myTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+            cell.indexPath = [NSIndexPath indexPathForRow:i - 1 inSection:0];
+        }
+        
         NSString *string = [NSString stringWithFormat:@"%@",_currentArr[indexPath.row]];
         
         [_currentArr removeObjectAtIndex:indexPath.row];
@@ -161,7 +186,14 @@
         [_myTableView beginUpdates];
         [_myTableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:(_optionalArr.count - 1) inSection:1]] withRowAnimation:UITableViewRowAnimationMiddle];
         [_myTableView endUpdates];
+        
     } else {
+        
+        for (NSInteger i = indexPath.row + 1; i < _optionalArr.count; i++) {
+            OWCustomPickerCell *cell = (OWCustomPickerCell *)[_myTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:1]];
+            cell.indexPath = [NSIndexPath indexPathForRow:i - 1 inSection:1];
+        }
+        
         NSString *string = [NSString stringWithFormat:@"%@",_optionalArr[indexPath.row]];
         
         [_optionalArr removeObjectAtIndex:indexPath.row];
@@ -183,6 +215,25 @@
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return UITableViewCellEditingStyleNone;
+}
+
+- (void)refreshCellIndexPath:(NSIndexPath *)fromeIndex toIndexPath:(NSIndexPath *)toIndex
+{
+    for (id object in [_myTableView subviews]) {
+        if ([object isKindOfClass:[OWCustomPickerCell class]]) {
+            OWCustomPickerCell *cell = (OWCustomPickerCell *)object;
+            
+            if (fromeIndex.section == toIndex.section) {
+                
+                if (cell.indexPath.section == fromeIndex.section) {
+                    
+                }
+                
+            } else {
+                
+            }
+        }
+    }
 }
 
 #pragma mark - 方法实现
@@ -241,6 +292,11 @@
                 } else {
                     [_optionalArr exchangeObjectAtIndex:indexPath.row withObjectAtIndex:sourceIndexPath.row];
                 }
+                
+                OWCustomPickerCell *cell0 = (OWCustomPickerCell *)[_myTableView cellForRowAtIndexPath:indexPath];
+                cell0.indexPath = [NSIndexPath indexPathForRow:sourceIndexPath.row inSection:cell0.indexPath.section];
+                OWCustomPickerCell *cell1 = (OWCustomPickerCell *)[_myTableView cellForRowAtIndexPath:sourceIndexPath];
+                cell1.indexPath = [NSIndexPath indexPathForRow:indexPath.row inSection:cell1.indexPath.section];
             } else {
                 return;
             }

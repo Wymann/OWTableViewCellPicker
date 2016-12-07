@@ -25,6 +25,8 @@ typedef enum {
 
 @property (weak, nonatomic) id <OWCustomPickerCellDelegate> delegate;
 
+@property (nonatomic, strong) NSIndexPath *indexPath;
+
 - (instancetype)initWithTitle:(NSString *)cellTitle height:(CGFloat)cellHeight width:(CGFloat)cellWidth indexPath:(NSIndexPath *)indexPath isEdit:(BOOL)isEdit;
 
 @end
