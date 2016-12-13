@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "OWTableViewCellPicker"
-  s.version      = "0.0.4"
-  s.summary      = "Pick cell item by clicking or dragging cell. recommend version 0.0.4"
+  s.version      = "0.0.5"
+  s.summary      = "Pick cell item by clicking or dragging cell"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
 Pick cell item by clicking or dragging cell. recommend version 0.0.4
-                   DESC
+                  DESC
 
   s.homepage     = "https://github.com/Wymann/OWTableViewCellPicker"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
