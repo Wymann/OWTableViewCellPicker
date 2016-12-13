@@ -286,16 +286,15 @@
         if (indexPath && ![indexPath isEqual:sourceIndexPath]) {
             
             // ... update data source.
-            if (indexPath.section == sourceIndexPath.section) {
+            OWCustomPickerCell *cell0 = (OWCustomPickerCell *)[_myTableView cellForRowAtIndexPath:indexPath];
+            OWCustomPickerCell *cell1 = (OWCustomPickerCell *)[_myTableView cellForRowAtIndexPath:sourceIndexPath];
+            if (indexPath.section == sourceIndexPath.section && cell0.isEdit && cell1.isEdit) {
                 if (indexPath.section == 0) {
                     [_currentArr exchangeObjectAtIndex:indexPath.row withObjectAtIndex:sourceIndexPath.row];
                 } else {
                     [_optionalArr exchangeObjectAtIndex:indexPath.row withObjectAtIndex:sourceIndexPath.row];
                 }
-                
-                OWCustomPickerCell *cell0 = (OWCustomPickerCell *)[_myTableView cellForRowAtIndexPath:indexPath];
                 cell0.indexPath = [NSIndexPath indexPathForRow:sourceIndexPath.row inSection:cell0.indexPath.section];
-                OWCustomPickerCell *cell1 = (OWCustomPickerCell *)[_myTableView cellForRowAtIndexPath:sourceIndexPath];
                 cell1.indexPath = [NSIndexPath indexPathForRow:indexPath.row inSection:cell1.indexPath.section];
             } else {
                 return;

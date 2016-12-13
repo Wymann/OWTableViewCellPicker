@@ -15,7 +15,6 @@
 @property (nonatomic) CGFloat cellWidth;
 @property (nonatomic, strong) UIView *managerView;
 @property (nonatomic, strong) UIButton *button;
-@property (nonatomic) BOOL isEdit;
 
 @end
 
